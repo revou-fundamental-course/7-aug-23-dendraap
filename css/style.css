@@ -6,34 +6,46 @@ body {
     padding: 24px;
     width: 50%;
 }
-
-main {
-    padding: 24px;
-    background-color: #262439;   
-    border-radius: 15px;
-    padding: 16px;
-    font-family: 'Helvetica';
-    letter-spacing: 0.02em;
-}
-
 header {
-    /* background-color: #262439; */
     color: #262439;
     text-align: center;
-    padding: 24px;
-    /* margin-left: 100px;
-    margin-right: 100px; */
+    padding:0 24px;
     border-radius: 10px;
     font-family: 'Helvetica Rounded';
 }
 h1{
     font-size: xx-large;
+    text-align: center;
+}
+h3{
+    text-align: center;
+    font-size: x-large;
+}
+main {
+    padding: 24px;
+    border-radius: 15px;
+    padding: 16px;
+    font-family: 'Helvetica';
+    letter-spacing: 0.02em;
+
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+#bangun-datar-button-section{
+    margin-bottom: 48px;
+    margin-top: 0px;
 }
 #input-section {
     display: flex;
     flex-direction: column;
     color: white;
-    padding: 16px;
+    padding: 48px;
+    background-color: #262439;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    overflow: hidden;
 }
 label{
     margin: 5px 0;
@@ -41,7 +53,7 @@ label{
 }
 input{
     margin: 8px 0;
-    padding: 12px;
+    padding: 16px;
     border-radius: 10px;
     margin-bottom: 24px;
     font-size: medium;
@@ -87,6 +99,11 @@ button:active{
 .button-primary{
     background-color: #FFC448;
 }
+.button-primary-inactive{
+    color: #262439;
+    background-color: white;
+    border: 1px solid #FFC448;
+}
 .button-secondary{
     background-color: #6344C6;
     color: white    ;
@@ -94,4 +111,33 @@ button:active{
 .button-red{
     background-color: red;
     color: white;
+}
+.sub-container{
+    color: #262439;
+    padding: 16px;
+}
+.rumus{
+    text-align: center;
+}
+.sub-judul{
+    background-color: #262439;
+    text-align: center;
+    color: white;
+}
+.img-wrapper{
+    display: flex;
+    width: 100%;
+    padding: 16px 0;
+    justify-content: center;
+    flex-direction: column;
+}
+img{
+    margin-left: auto;
+    margin-right: auto;
+}
+.atas{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #262439;
 }
