@@ -8,10 +8,33 @@
 </head>
 <body>
     <header>
-        <h1>Kalkulator Luas dan Keliling Segitiga</h1>
+        <h1>Welcome to Katik</h1>
+        <p>Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar</p>
     </header>
     <main>
+        <section id="bangun-datar-button-section">
+            <div class="container">
+                <button class="button-primary">Segitiga</button>
+                <button class="button-primary-inactive">Jajar Genjang</button>
+            </div>
+        </section>
+        <section>
+            <div class="container atas">
+                <div class="sub-judul">
+                    <h2>Luas Segitiga</h2>
+                </div>
+                <div class="img-wrapper">
+                    <img src="assets/segitiga.jpg" alt="contoh gambar segitiga" width="30%">
+                </div>
+                <div class="sub-container">
+                    <p>Rumus Luas Segitiga yaitu:</p>
+                    <p class="rumus"><strong>L = 1/2 x a x t</strong></p>
+                    <p>Dimana: <br>L = Luas <br>a = Panjang Alas <br>t = Tinggi</p>
+                </div>
+            </div>
+        </section>
         <section id="input-section">
+            <h3>Hitung Luas Segitiga</h3>
             <label for="tinggi-input">Masukkan Tinggi Segitiga</label>
             <input type="number" id="tinggi-input" placeholder="0">
             <label for="alas-input">Masukkan Panjang Alas</label>
@@ -19,11 +42,12 @@
             <section id="input-button-section">
                 <button class="button-primary lebar">Hitung</button>
                 <div class="other-button-section">
-                    <button class="button-secondary">Go To Hitung Luas</button>
+                    <button class="button-secondary" id="count-button">Go To Hitung Luas</button>
                     <button class="button-red">Reset</button>
                 </div>
             </section>
         </section>
     </main>
+    <script src="js/index.js"></script>
 </body>
 </html>

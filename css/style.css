@@ -75,6 +75,7 @@ input:focus{
 .other-button-section{
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     padding-top: 24px;
 
@@ -140,4 +141,10 @@ img{
     border-top-right-radius: 15px;
     overflow: hidden;
     border: 1px solid #262439;
+}
+
+@media screen and (max-width: 740px) {
+    .other-button-section{
+        flex-direction: column;
+    }
 }
