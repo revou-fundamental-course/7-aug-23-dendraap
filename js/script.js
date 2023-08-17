@@ -151,7 +151,7 @@ function hitungLuasSegitiga(){
 }
 
 function hitungKelilingSegitiga(){
-    if (document.getElementById('a-input').value == "" || document.getElementById('b-input').value == "" || document.getElementById('c-input').value){
+    if (document.getElementById('a-input').value == "" || document.getElementById('b-input').value == "" || document.getElementById('c-input').value == ""){
         alert("Lengkapi formnya dulu yaaa")
     } else {
         var sisiA = parseFloat(document.getElementById('a-input').value)
@@ -168,7 +168,8 @@ function hitungKelilingSegitiga(){
 }
 
 function hitungLuasJajargenjang(){
-    if(document.getElementById("tinggi-jajargenjang-input").value = "" || document.getElementById("alas-jajargenjang-input").value == ""){
+
+    if (document.getElementById("tinggi-jajargenjang-input").value == "" || document.getElementById("alas-jajargenjang-input").value == ""){
         alert("Lengkapi form nya dulu yaaa")
     } else {
         var tinggi = parseFloat(document.getElementById("tinggi-jajargenjang-input").value)
