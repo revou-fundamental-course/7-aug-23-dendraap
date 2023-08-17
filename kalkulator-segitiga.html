@@ -13,12 +13,15 @@
     </header>
     <main>
         <section id="bangun-datar-button-section">
-            <div class="container">
-                <button class="button-primary">Segitiga</button>
-                <button class="button-primary-inactive">Jajar Genjang</button>
+            <div class="container" id="btn-pilih-bangun-datar">
+                <button class="button-primary active" id="segitiga" onclick="displayLuasSegitiga()">Segitiga</button>
+                <button class="button-primary" id="jajargenjang" onclick="displayLuasJajargenjang()">Jajar Genjang</button>
             </div>
         </section>
-        <section>
+
+
+        <!-- Luas Segitiga Start-->
+        <section id="luas-segitiga">
             <div class="container atas">
                 <div class="sub-judul">
                     <h2>Luas Segitiga</h2>
@@ -26,27 +29,148 @@
                 <div class="img-wrapper">
                     <img src="assets/segitiga.jpg" alt="contoh gambar segitiga" width="30%">
                 </div>
-                <div class="sub-container">
+                <div class="sub-container light">
                     <p>Rumus Luas Segitiga yaitu:</p>
                     <p class="rumus"><strong>L = 1/2 x a x t</strong></p>
                     <p>Dimana: <br>L = Luas <br>a = Panjang Alas <br>t = Tinggi</p>
                 </div>
             </div>
         </section>
-        <section id="input-section">
-            <h3>Hitung Luas Segitiga</h3>
-            <label for="tinggi-input">Masukkan Tinggi Segitiga</label>
-            <input type="number" id="tinggi-input" placeholder="0">
-            <label for="alas-input">Masukkan Panjang Alas</label>
-            <input type="number" id="alas-input" placeholder="0">
-            <section id="input-button-section">
-                <button class="button-primary lebar">Hitung</button>
-                <div class="other-button-section">
-                    <button class="button-secondary" id="count-button">Go To Hitung Luas</button>
-                    <button class="button-red">Reset</button>
-                </div>
-            </section>
+        <section class="input-section" id="input-luas-segitiga">
+            <div class="sub-container">
+                <h3>Hitung Luas Segitiga</h3>
+                <label for="tinggi-input">Masukkan Tinggi Segitiga</label>
+                <input type="number" id="tinggi-input" placeholder="0">
+                <label for="alas-input">Masukkan Panjang Alas</label>
+                <input type="number" id="alas-input" placeholder="0">
+                <section class="input-button-section">
+                    <button class="button-primary lebar active" onclick="hitungLuasSegitiga()">Hitung</button>
+                    <div id="container-hasil-luas-segitiga">
+                        <p>L = 1/2 * a * t <br>L = 1/2 * <span id="tinggi-segitiga"></span> * <span id="alas-segitiga"></span> <br>L = <span id="hasil-luas-segitiga"></span></p>
+                    </div>
+                    <div class="other-button-section">
+                        <button class="button-secondary" id="hitung-keliling-segitiga" onclick="displayKelilingSegitiga()">Go To Hitung Keliling</button>
+                        <button class="button-red" onclick="resetDisplayHasil()">Reset</button>
+                    </div>
+                </section>
+            </div>
         </section>
+        <!-- Luas Segitiga Ends -->
+
+
+        <!-- Keliling Segitiga Start -->
+        <section id="keliling-segitiga">
+            <div class="container atas">
+                <div class="sub-judul">
+                    <h2>Keliling Segitiga</h2>
+                </div>
+                <div class="img-wrapper">
+                    <img src="assets/segitiga.jpg" alt="contoh gambar segitiga" width="30%">
+                </div>
+                <div class="sub-container light">
+                    <p>Rumus Keliling Segitiga yaitu:</p>
+                    <p class="rumus"><strong>K = A + B + C</strong></p>
+                    <p>Dimana: <br>K = Luas <br>A = Panjang sisi pertama <br>B = Panjang sisi kedua <br>C = Panjang sisi ketiga</p>
+                </div>
+            </div>
+        </section>
+        <section class="input-section" id="input-keliling-segitiga">
+            <div class="sub-container">
+                <h3>Hitung Keliling Segitiga</h3>
+                <label for="a-input">Masukkan Sisi A Segitiga</label>
+                <input type="number" id="a-input" placeholder="0">
+                <label for="b-input">Masukkan Sisi B Segitiga</label>
+                <input type="number" id="b-input" placeholder="0">
+                <label for="c-input">Masukkan Sisi C Segitiga</label>
+                <input type="number" id="c-input" placeholder="0">
+                <section class="input-button-section">
+                    <button class="button-primary lebar active" onclick="hitungKelilingSegitiga()">Hitung</button>
+                    <div id="container-hasil-keliling-segitiga">
+                        <p>K = Sisi A + Sisi B + Sisi C <br>K = <span id="sisi-a"></span> + <span id="sisi-b"></span> + <span id="sisi-c"></span> <br>K = <span id="hasil-keliling-segitiga"></span></p>
+                    </div>
+                    <div class="other-button-section">
+                        <button class="button-secondary" id="hitung-luas-segitiga" onclick="displayLuasSegitiga()">Go To Hitung Luas</button>
+                        <button class="button-red" onclick="resetDisplayHasil()">Reset</button>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <!-- Keliling Segitiga Ends -->
+
+
+        <!-- Luas Jajargenjang Start -->
+        <section id="luas-jajargenjang">
+            <div class="container atas">
+                <div class="sub-judul">
+                    <h2>Luas Jajargenjang</h2>
+                </div>
+                <div class="img-wrapper">
+                    <img src="assets/jajargenjang.png" alt="contoh gambar jajargenjang" width="30%">
+                </div>
+                <div class="sub-container light">
+                    <p>Rumus Luas Jajargenjang yaitu:</p>
+                    <p class="rumus"><strong>L = a x t</strong></p>
+                    <p>Dimana: <br>L = Luas <br>a = Panjang Alas <br>t = Tinggi</p>
+                </div>
+            </div>
+        </section>
+        <section class="input-section" id="input-luas-jajargenjang">
+            <div class="sub-container">
+                <h3>Hitung Luas Jajargenjang</h3>
+                <label for="tinggi-jajargenjang-input">Masukkan Tinggi Jajargenjang</label>
+                <input type="number" id="tinggi-jajargenjang-input" placeholder="0">
+                <label for="alas-jajargenjang-input">Masukkan Panjang Alas Jajargenjang</label>
+                <input type="number" id="alas-jajargenjang-input" placeholder="0">
+                <section class="input-button-section">
+                    <button class="button-primary lebar active" onclick="hitungLuasJajargenjang()">Hitung</button>
+                    <div id="container-hasil-luas-jajargenjang">
+                        <p>L = a * t <br>L = <span id="alas-jajargenjang"></span> * <span id="tinggi-jajargenjang"></span><br>L = <span id="hasil-luas-jajargenjang"></span></p>
+                    </div>
+                    <div class="other-button-section">
+                        <button class="button-secondary" id="hitung-keliling-jajargenjang" onclick="displayKelilingJajargenjang()">Go To Hitung Keliling</button>
+                        <button class="button-red" onclick="resetDisplayHasil()">Reset</button>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <!-- luas Jajargenjang Ends -->
+
+
+        <!-- Keliling Jajargenjang Start -->
+        <section id="keliling-jajargenjang">
+            <div class="container atas">
+                <div class="sub-judul">
+                    <h2>Keliling Jajargenjang</h2>
+                </div>
+                <div class="img-wrapper">
+                    <img src="assets/jajargenjang.png" alt="contoh gambar jajargenjang" width="30%">
+                </div>
+                <div class="sub-container light">
+                    <p>Rumus Keliling Jajargenjang yaitu:</p>
+                    <p class="rumus"><strong>K = 2 * (a + b)</strong></p>
+                    <p>Dimana: <br>L = Luas <br>a = Panjang Alas atau Atap <br>b = Panjang Sisi Miring kiri atau kanan</p>
+                </div>
+            </div>
+        </section>
+        <section class="input-section" id="input-keliling-jajargenjang">
+            <div class="sub-container">
+                <h3>Hitung Keliling Jajargenjang</h3>
+                <label for="a-jajargenjang-input">Masukkan Panjang Sisi A Jajargenjang</label>
+                <input type="number" id="a-jajargenjang-input" placeholder="0">
+                <label for="b-jajargenjang-input">Masukkan Panjang Sisi B Jajargenjang</label>
+                <input type="number" id="b-jajargenjang-input" placeholder="0">
+                <section class="input-button-section">
+                    <button class="button-primary lebar active" onclick="hitungKelilingJajargenjang()">Hitung</button>
+                    <div id="container-hasil-keliling-jajargenjang">
+                        <p>K = 2 * (a + t) <br>K = 2 * (<span id="a-jajargenjang"></span> + <span id="b-jajargenjang"></span>)<br>K = <span id="hasil-keliling-jajargenjang"></span></p>
+                    </div>
+                    <div class="other-button-section">
+                        <button class="button-secondary" id="hitung-luas-jajargenjang" onclick="displayLuasJajargenjang()">Go To Hitung Luas</button>
+                        <button class="button-red" onclick="resetDisplayHasil()">Reset</button>
+                    </div>
+                </section>
+            </div>
+        <!-- Keliling Jajargenjang Ends -->
     </main>
     <script src="js/index.js"></script>
 </body>
