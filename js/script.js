@@ -136,49 +136,65 @@ function displayKelilingJajargenjang(){
 
 
 function hitungLuasSegitiga(){
-    var tinggi = parseFloat(document.getElementById("tinggi-input").value)
-    var alas = parseFloat(document.getElementById("alas-input").value)
-    let hasil = 1/2*tinggi*alas
 
-    containerHasilLuasSegitiga.style.display = "block"
-    document.getElementById("tinggi-segitiga").innerHTML = tinggi
-    document.getElementById("alas-segitiga").innerHTML = alas
-    document.getElementById("hasil-luas-segitiga").innerHTML = hasil
+    if (document.getElementById("tinggi-input").value == "" || document.getElementById("alas-input").value == ""){
+        alert("Lengkapi formnya dulu yaaa")
+    } else {
+        var tinggi = parseFloat(document.getElementById("tinggi-input").value)
+        var alas = parseFloat(document.getElementById("alas-input").value)
+        let hasil = 1/2*tinggi*alas
+        containerHasilLuasSegitiga.style.display = "block"
+        document.getElementById("tinggi-segitiga").innerHTML = tinggi
+        document.getElementById("alas-segitiga").innerHTML = alas
+        document.getElementById("hasil-luas-segitiga").innerHTML = hasil
+    }
 }
 
 function hitungKelilingSegitiga(){
-    var sisiA = parseFloat(document.getElementById('a-input').value)
-    var sisiB = parseFloat(document.getElementById('b-input').value)
-    var sisiC = parseFloat(document.getElementById('c-input').value)
-    let hasil = sisiA+sisiB+sisiC
-
-    containerHasilKelilingSegitiga.style.display = "block"
-    document.getElementById("sisi-a").innerHTML = sisiA
-    document.getElementById("sisi-b").innerHTML = sisiB
-    document.getElementById("sisi-c").innerHTML = sisiC
-    document.getElementById("hasil-keliling-segitiga").innerHTML = hasil
+    if (document.getElementById('a-input').value == "" || document.getElementById('b-input').value == "" || document.getElementById('c-input').value){
+        alert("Lengkapi formnya dulu yaaa")
+    } else {
+        var sisiA = parseFloat(document.getElementById('a-input').value)
+        var sisiB = parseFloat(document.getElementById('b-input').value)
+        var sisiC = parseFloat(document.getElementById('c-input').value)
+        let hasil = sisiA+sisiB+sisiC
+    
+        containerHasilKelilingSegitiga.style.display = "block"
+        document.getElementById("sisi-a").innerHTML = sisiA
+        document.getElementById("sisi-b").innerHTML = sisiB
+        document.getElementById("sisi-c").innerHTML = sisiC
+        document.getElementById("hasil-keliling-segitiga").innerHTML = hasil
+    }
 }
 
 function hitungLuasJajargenjang(){
-    var tinggi = parseFloat(document.getElementById("tinggi-jajargenjang-input").value)
-    var alas = parseFloat(document.getElementById("alas-jajargenjang-input").value)
-    let hasil = tinggi*alas
-
-    containerHasilLuasJajargenjang.style.display = "block"
-    document.getElementById("tinggi-jajargenjang").innerHTML = tinggi
-    document.getElementById("alas-jajargenjang").innerHTML = alas
-    document.getElementById("hasil-luas-jajargenjang").innerHTML = hasil
+    if(document.getElementById("tinggi-jajargenjang-input").value = "" || document.getElementById("alas-jajargenjang-input").value == ""){
+        alert("Lengkapi form nya dulu yaaa")
+    } else {
+        var tinggi = parseFloat(document.getElementById("tinggi-jajargenjang-input").value)
+        var alas = parseFloat(document.getElementById("alas-jajargenjang-input").value)
+        let hasil = tinggi*alas
+    
+        containerHasilLuasJajargenjang.style.display = "block"
+        document.getElementById("tinggi-jajargenjang").innerHTML = tinggi
+        document.getElementById("alas-jajargenjang").innerHTML = alas
+        document.getElementById("hasil-luas-jajargenjang").innerHTML = hasil
+    }
 }
 
 function hitungKelilingJajargenjang(){
-    var tinggi = parseFloat(document.getElementById("a-jajargenjang-input").value)
-    var alas = parseFloat(document.getElementById("b-jajargenjang-input").value)
-    let hasil = 2 * (tinggi + alas)
-
-    containerHasilKelilingJajargenjang.style.display = "block"
-    document.getElementById("a-jajargenjang").innerHTML = tinggi
-    document.getElementById("b-jajargenjang").innerHTML = alas
-    document.getElementById("hasil-keliling-jajargenjang").innerHTML = hasil
+    if (document.getElementById("a-jajargenjang-input").value == "" || document.getElementById("b-jajargenjang-input").value == ""){
+        alert("Lengkapi form nya dulu yaaa")
+    } else {
+        var tinggi = parseFloat(document.getElementById("a-jajargenjang-input").value)
+        var alas = parseFloat(document.getElementById("b-jajargenjang-input").value)
+        let hasil = 2 * (tinggi + alas)
+    
+        containerHasilKelilingJajargenjang.style.display = "block"
+        document.getElementById("a-jajargenjang").innerHTML = tinggi
+        document.getElementById("b-jajargenjang").innerHTML = alas
+        document.getElementById("hasil-keliling-jajargenjang").innerHTML = hasil
+    }
 }
 
 function resetDisplayHasil(){
